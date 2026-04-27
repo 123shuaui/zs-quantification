@@ -1,0 +1,33 @@
+{
+  "batch_size": 1,
+  "num_heads": 8,
+  "head_dim": 64,
+  "num_layers": 32,
+  "seq_len": 4096,
+  "chunk_size": 32,
+  "kv_budget_mb": 256,
+  "alpha": 0.55,
+  "beta": 0.25,
+  "gamma": 0.2,
+  "tau_high": 0.7,
+  "tau_low": 0.35,
+  "kv_bitwidths": [
+    16,
+    4,
+    2
+  ],
+  "prefill_chunks": [
+    64,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "weight_templates": [
+    "w16a16",
+    "w8a16",
+    "w4a16",
+    "mixed_8_4"
+  ],
+  "model_params_billion": 7
+}
